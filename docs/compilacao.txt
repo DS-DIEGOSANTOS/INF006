@@ -1,0 +1,4 @@
+
+gcc -o ifba main.c view/*.c controller/*.c 
+
+./ifba
