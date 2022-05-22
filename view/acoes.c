@@ -768,10 +768,9 @@ void negociaAcoes(){
                 }
 
             }while(opcao<1 || opcao>id);
-            id = opcao;
             auxMatch = match;
 
-            while(auxMatch != NULL && idAux != id){
+            while(auxMatch != NULL && idAux != opcao){
                 auxMatch = auxMatch->proximaVenda;
                 idAux++;
             }
@@ -814,7 +813,6 @@ void negociaAcoes(){
             copia.acoes = auxMatch->acoes - aux->acoes;
             copia.papel = auxMatch->papel;
             copia.precoVenda = auxMatch ->precoVenda;
-            
             retiraVenda(auxMatch);
             cabecoteVenda = vendaInsere(cabecoteVenda,copia);
             atualizaVenda();

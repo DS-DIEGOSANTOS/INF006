@@ -299,10 +299,6 @@ void retiraVenda(Venda* venda){
         p = p->proximaVenda;
     }
 
-    if(p==NULL){
-        apagaVenda();
-    }
-
     if(ant==NULL){
         cabecoteVenda = cabecoteVenda->proximaVenda;
     }else{
